@@ -5,9 +5,11 @@
         @vite(['resources/css/app.css'])
     </head>
     <body class="bg-gray-900 text-white">
-        @if (session('status'))
-           <div>{{session('status')}}</div>
-        @endif
-        {{$slot}}
+        <div class="flex flex-col items-center justify-center min-h-screen">
+            @if (session('status'))
+            <div>{{session('status')}}</div>
+            @endif
+            {{$slot}}
+        </div>
     </body>
 </html>

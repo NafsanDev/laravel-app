@@ -30,3 +30,12 @@ Route::controller(ProductController::class)
             ->name('destroy');
 });
 
+Route::get('/teas', function(){
+    $teas = [
+        ['name' => 'Condensed Milk Tea', 'price'=> 10, 'id'=> 1],
+        ['name' => 'Color Tea', 'price'=> 5, 'id'=> 2],
+        ['name' => 'Cow Milk Tea', 'price'=> 15, 'id'=> 3]
+    ];
+
+    return view('teas.index', ['teas' => $teas]);
+});
