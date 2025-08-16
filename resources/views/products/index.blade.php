@@ -1,5 +1,5 @@
 <x-layout>
-<H1>Products</H1>
+<H1 class="text-3xl">Products</H1>
 <a href="{{route('products.create')}}"> New Product</a>
 @foreach ($products as $product)
     <h3><a href="{{route('products.show', $product->id)}}">{{$product->name}}</a></h3>

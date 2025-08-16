@@ -2,9 +2,9 @@
 <html>
     <head>
         <Title>Laravel App</Title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+        @vite(['resources/css/app.css'])
     </head>
-    <body>
+    <body class="bg-gray-900 text-white">
         @if (session('status'))
            <div>{{session('status')}}</div>
         @endif
